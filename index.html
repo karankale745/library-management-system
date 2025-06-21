@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h1>Library Management System</h1>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab('admin')">Admin Login</button>
+                <button class="tab-btn" onclick="openTab('student')">Student Login</button>
+                <button class="tab-btn" onclick="openTab('register')">Register</button>
+            </div>
+            
+            <div id="admin" class="tab-content active">
+                <h2>Admin Login</h2>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminUsername">Username:</label>
+                        <input type="text" id="adminUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password:</label>
+                        <input type="password" id="adminPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            
+            <div id="student" class="tab-content">
+                <h2>Student Login</h2>
+                <form id="studentLoginForm">
+                    <div class="form-group">
+                        <label for="studentId">Student ID:</label>
+                        <input type="text" id="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentPassword">Password:</label>
+                        <input type="password" id="studentPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            
+            <div id="register" class="tab-content">
+                <h2>Student Registration</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full Name:</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email:</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regId">Student ID:</label>
+                        <input type="text" id="regId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password:</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

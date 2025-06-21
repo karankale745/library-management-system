@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Dashboard</h1>
+        <div class="student-info">
+            <span id="studentNameDisplay"></span>
+            <button id="studentLogoutBtn" class="btn">Logout</button>
+        </div>
+    </header>
+    
+    <div class="student-container">
+        <div class="student-tabs">
+            <button class="student-tab-btn active" onclick="openStudentTab('available')">Available Books</button>
+            <button class="student-tab-btn" onclick="openStudentTab('borrowed')">My Borrowed Books</button>
+        </div>
+        
+        <div id="available" class="student-tab-content active">
+            <h2>Available Books</h2>
+            <div class="search-container">
+                <input type="text" id="bookSearch" placeholder="Search books...">
+                <button class="btn" onclick="searchBooks()">Search</button>
+            </div>
+            <div class="table-container">
+                <table id="availableBooksTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Available</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="availableBooksList">
+                        <!-- Available books will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="borrowed" class="student-tab-content">
+            <h2>My Borrowed Books</h2>
+            <div class="table-container">
+                <table id="borrowedBooksTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Borrow Date</th>
+                            <th>Due Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="borrowedBooksList">
+                        <!-- Borrowed books will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
